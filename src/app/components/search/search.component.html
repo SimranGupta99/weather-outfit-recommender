@@ -1,0 +1,11 @@
+<div class="search-box">
+  <input
+    type="text"
+    placeholder="Enter city"
+    [(ngModel)]="searchTerm"
+    (input)="onInputChange()"
+  />
+  <button (click)="onSearch()">
+    🔍
+  </button>
+</div>

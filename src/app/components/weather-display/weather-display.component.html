@@ -1,0 +1,13 @@
+<div class="weather-card" *ngIf="weather$ | async as weather">
+  <h2>{{ weather.city }}</h2>
+  <img [src]="getIconUrl(weather.icon)" alt="weather icon" />
+  <div class="temperature">{{ weather.temperature }}°C</div>
+  <div class="condition">{{ weather.condition }}</div>
+  <div class="extras">
+    <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
+    <p><strong>Wind:</strong> {{ weather.windSpeed }} km/h</p>
+  </div>
+</div>
+
+<div *ngIf="loading$ | async" class="loading">Loading...</div>
+<div *ngIf="error$ | async as error" class="error">{{ error }}</div>

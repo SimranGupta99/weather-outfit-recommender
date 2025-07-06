@@ -1,0 +1,41 @@
+.history-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  .city-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    span {
+      background: #e3f2fd;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #1976d2;
+      cursor: pointer;
+
+      &:hover {
+        background: #bbdefb;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .dashboard-container {
+    margin: 20px 12px;
+    padding: 16px;
+  }
+
+  .search-box input {
+    font-size: 0.95rem;
+  }
+}

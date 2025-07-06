@@ -1,0 +1,8 @@
+<div *ngIf="history$ | async as history" class="history-card">
+  <h4>Recent Searches</h4>
+  <div class="city-list">
+    <span *ngFor="let city of history" (click)="onSelectCity(city)">
+      {{ city }}
+    </span>
+  </div>
+</div>
